@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Todo
+{% endblock %}
+
+{% block body %}
+	<div class="container mx-auto mt-4">
+		<div class="w-full max-w-xs">
+			<h1>Créer une tâche</h1>
+			{{ include('todo/_form.html.twig') }}
+		</div>
+	</div>
+
+{% endblock %}

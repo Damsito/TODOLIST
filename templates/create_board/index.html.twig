@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CreateBoardController!
+{% endblock %}
+
+{% block body %}
+	<div class="container mx-auto mt-4">
+		<div class="w-full max-w-xs">
+			{{form_start(form, {'attr': {'class': 'bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'}})}}
+
+			<div class="mb-4">
+				{{form_row(form.nom)}}
+				<div class="mb-6">
+					{{form_row(form.description)}}
+				</div>
+				<div class="flex items-center justify-between">
+					<button type="submit" class="btn btn-primary">
+						Ajouter
+					</button>
+					<a class="btn btn-outline-success" href="{{ path('app_home') }}">Revenir</a>
+
+				</div>
+				{{form_end(form)}}
+			</div>
+		{% endblock %}
